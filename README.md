@@ -6,6 +6,11 @@ This project is a high-performance graphical interface for the excellent [xvzc/S
 
 
 
+## 📸 Screenshots
+
+![Dashboard](media/dashboard.png)
+![Logs](media/logs.png)
+
 ## ✨ Features
 
 - **One-Click Proxy:** Start and stop the SpoofDPI service with a single button.
