@@ -1,4 +1,4 @@
-# SpoofDPI UI (Stable v0.12.0)
+# SpoofDPI UI (Stable v1.2.1)
 
 A modern, beautiful desktop application for **SpoofDPI**, an anti-censorship tool designed to bypass Deep Packet Inspection (DPI) by manipulating network traffic.
 
