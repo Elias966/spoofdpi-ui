@@ -55,7 +55,7 @@ This UI wrapper is released under the MIT License. The core SpoofDPI binary is l
 **Disclaimer:** This is an independent UI wrapper. All credit for the DPI bypass logic goes to the original author of [SpoofDPI](https://github.com/xvzc/SpoofDPI).
 
 ### 🌐 Local Network Exceptions
-If you have trouble connecting to local devices (like a Pi-hole, router, or local server), add these to your browser's "No Proxy for" list:
+If you have trouble connecting to local devices (like a Pi-hole, router, or local server), add these to your browser's "No Proxy for" list or the system proxy like i did:
 
 ```text
 localhost, 127.0.0.1, pi.hole, 192.168.*, 10.*
