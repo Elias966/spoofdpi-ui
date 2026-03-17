@@ -34,7 +34,7 @@ Grab the latest **AppImage** from the [Releases](https://github.com/Elias966/spo
     - Check **"Also use this proxy for HTTPS"**.
 
 ## ☕ Support
-If you find this project useful, consider supporting the developer:
+If you find this project useful, consider supporting me:
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/Maxnoon)
 
