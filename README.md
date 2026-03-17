@@ -33,7 +33,7 @@ Grab the latest **AppImage** from the [Releases](https://github.com/Elias966/spo
     - Check **"Also use this proxy for HTTPS"**.
 
 ## 🛠️ Built With
-- **Backend:** Electron (Node.js) + [SpoofDPI v0.12.0 Stable Binary](https://github.com/xvzc/SpoofDPI)
+- **Backend:** Electron (Node.js) + [SpoofDPI v1.2.1 Stable Binary](https://github.com/xvzc/SpoofDPI)
 - **Frontend:** React + TypeScript + Vite
 - **Icons:** Lucide React
 
