@@ -50,7 +50,6 @@ ipcMain.on('start-proxy', (event, args) => {
   }
 
   const binaryName = 'spoofdpi';
-  // Use a reliable path that works in AppImage and dev
   const binaryPath = path.join(__dirname.replace('app.asar', 'app.asar.unpacked'), binaryName);
 
   if (!fs.existsSync(binaryPath)) {
@@ -59,23 +58,21 @@ ipcMain.on('start-proxy', (event, args) => {
     return;
   }
 
-  // Map settings to STABLE v0.12.0 flags
+  // Map settings to v1.2.1 flags
   const spawnArgs = [];
-  if (args.port) spawnArgs.push('-port', args.port.toString());
-  if (args.dnsAddr) {
-    const [ip, port] = args.dnsAddr.split(':');
-    spawnArgs.push('-dns-addr', ip);
-    if (port) spawnArgs.push('-dns-port', port);
-  }
-  if (args.dnsMode === 'doh') spawnArgs.push('-enable-doh');
+  if (args.port) spawnArgs.push('--listen-addr', `127.0.0.1:${args.port}`);
+  if (args.dnsAddr && args.dnsMode === 'udp') spawnArgs.push('--dns-addr', args.dnsAddr);
+  if (args.dnsMode) spawnArgs.push('--dns-mode', args.dnsMode);
+  if (args.dohUrl && args.dnsMode === 'doh') spawnArgs.push('--dns-https-url', args.dohUrl);
+  if (args.httpsDisorder) spawnArgs.push('--https-disorder');
+  if (args.httpsSplitMode) spawnArgs.push('--https-split-mode', args.httpsSplitMode);
+  if (args.policyAuto) spawnArgs.push('--policy-auto');
+  if (args.logLevel) spawnArgs.push('--log-level', args.logLevel);
   
-  // v0.12.0 uses -window-size for fragmentation control
-  if (args.httpsSplitMode === 'chunk') spawnArgs.push('-window-size', '1');
-  
-  // Default to silent to keep logs clean
-  spawnArgs.push('-silent');
+  // Use silent for clean logs
+  spawnArgs.push('--silent');
 
-  mainWindow.webContents.send('proxy-log', `Info: Executing ${binaryName} ${spawnArgs.join(' ')}`);
+  mainWindow.webContents.send('proxy-log', `Info: Starting SpoofDPI v1.2.1 with flags: ${spawnArgs.join(' ')}`);
 
   try {
     const currentProcess = spawn(binaryPath, spawnArgs, {
