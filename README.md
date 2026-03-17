@@ -4,7 +4,7 @@ A modern, beautiful desktop application for **SpoofDPI**, an anti-censorship too
 
 This project is a high-performance graphical interface for the excellent [xvzc/SpoofDPI](https://github.com/xvzc/SpoofDPI) project, built for stability and ease of use.
 
-![App Screenshot](https://raw.githubusercontent.com/xvzc/SpoofDPI/main/docs/assets/logo.png)
+
 
 ## ✨ Features
 
