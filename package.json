@@ -1,0 +1,45 @@
+{
+  "name": "spoofdpi-ui",
+  "version": "1.0.0",
+  "description": "A beautiful UI for SpoofDPI",
+  "main": "main.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build && electron-builder",
+    "electron": "electron .",
+    "dev": "concurrently \"npm run start\" \"wait-on http://localhost:5173 && electron .\""
+  },
+  "dependencies": {
+    "lucide-react": "^0.479.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "electron": "^35.0.0",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.0",
+    "wait-on": "^8.0.2"
+  },
+  "build": {
+    "appId": "com.spoofdpi.ui",
+    "linux": {
+      "target": "AppImage",
+      "category": "Network"
+    },
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "preload.js",
+      "spoofdpi",
+      "build/icon.png"
+    ],
+    "asarUnpack": [
+      "spoofdpi"
+    ]
+  }
+}
