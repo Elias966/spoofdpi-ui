@@ -2,7 +2,7 @@
 
 A modern, beautiful desktop application for **SpoofDPI**, an anti-censorship tool designed to bypass Deep Packet Inspection (DPI) by manipulating network traffic.
 
-This project is a graphical interface for the excellent [xvzc/SpoofDPI](https://github.com/xvzc/SpoofDPI) project.
+This project is a high-performance graphical interface for the excellent [xvzc/SpoofDPI](https://github.com/xvzc/SpoofDPI) project, built for stability and ease of use.
 
 ![App Screenshot](https://raw.githubusercontent.com/xvzc/SpoofDPI/main/docs/assets/logo.png)
 
@@ -10,9 +10,10 @@ This project is a graphical interface for the excellent [xvzc/SpoofDPI](https://
 
 - **One-Click Proxy:** Start and stop the SpoofDPI service with a single button.
 - **Modern Dashboard:** Real-time status indicator and connection summary.
-- **DNS Options:** Toggle between standard UDP and DNS-over-HTTPS (DoH).
+- **Latest v1.2.1 Engine:** Full support for the latest stable features including `random` fragmentation and `https-disorder`.
+- **DNS Options:** Toggle between standard UDP, DNS-over-HTTPS (DoH), and System DNS.
 - **Setup Guide:** Integrated instructions for configuring Firefox and other browsers.
-- **Live Logs:** Monitor intercepted traffic and DPI bypass activity.
+- **Live Logs:** Monitor intercepted traffic and DPI bypass activity in real-time.
 
 ## 🚀 Getting Started
 
@@ -25,12 +26,17 @@ Grab the latest **AppImage** from the [Releases](https://github.com/Elias966/spo
     chmod +x spoofdpi-ui.AppImage
     ./spoofdpi-ui.AppImage
     ```
-2.  **Start Proxy:** Click the "Start Proxy" button.
+2.  **Start Proxy:** Click the "Start Service" button.
 3.  **Configure Browser:**
     - Open **Firefox Settings** → **Network Settings**.
     - Select **Manual proxy configuration**.
     - HTTP Proxy: `127.0.0.1`, Port: `8080`.
     - Check **"Also use this proxy for HTTPS"**.
+
+## ☕ Support
+If you find this project useful, consider supporting the developer:
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/Maxnoon)
 
 ## 🛠️ Built With
 - **Backend:** Electron (Node.js) + [SpoofDPI v1.2.1 Stable Binary](https://github.com/xvzc/SpoofDPI)
