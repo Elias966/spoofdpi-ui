@@ -10,7 +10,6 @@ This project is a graphical interface for the excellent [xvzc/SpoofDPI](https://
 
 - **One-Click Proxy:** Start and stop the SpoofDPI service with a single button.
 - **Modern Dashboard:** Real-time status indicator and connection summary.
-- **Aggressive Spoofing:** Easy access to v0.12.0 stable features like `-window-size` fragmentation.
 - **DNS Options:** Toggle between standard UDP and DNS-over-HTTPS (DoH).
 - **Setup Guide:** Integrated instructions for configuring Firefox and other browsers.
 - **Live Logs:** Monitor intercepted traffic and DPI bypass activity.
